@@ -30,10 +30,21 @@ public class 숫자만추출 {
         return answer;
     }
 
+    public int solution2(String str) {
+        StringBuilder answer = new StringBuilder();
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                answer.append(c);
+            }
+        }
+        return Integer.parseInt(answer.toString());
+    }
+
     public static void main(String[] args) {
         숫자만추출 숫자만추출 = new 숫자만추출();
         Scanner scanner = new Scanner(System.in);
         String str = scanner.next();
-        System.out.println(숫자만추출.solution(str));
+//        System.out.println(숫자만추출.solution(str));
+        System.out.println(숫자만추출.solution2(str));
     }
 }
